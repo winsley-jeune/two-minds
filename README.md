@@ -63,6 +63,19 @@ This is Month 1 of an AI-engineering roadmap, built to surface how the practice 
 | Live output | Wait for the whole reply | **Streaming** via the SDK's token stream, re-streamed to the browser over **SSE** |
 | Architecture | One script that does everything | **Separation of concerns** — engine emits events; CLI and server are interchangeable transports |
 
+## roadmap.sh topic tags
+
+For discoverability when posting progress publicly, here's how each month of the roadmap maps to node names from the [roadmap.sh AI Engineer roadmap](https://roadmap.sh/ai-engineer) — useful as hashtags/keywords, not as the curriculum itself (that's the [2023→2026 table](#what-i-learned-2023--2026) above and the month-by-month plan).
+
+| Month | Demo | Matching roadmap.sh AI Engineer nodes |
+|---|---|---|
+| 1 ✅ | Two Minds (this repo) | Introduction, LLMs, Inference, Chat Completions API, Prompt Engineering, Writing Prompts, Anthropic's Claude, Token Counting, Maximum Tokens |
+| 2 | Screenshot → app | OpenAI Vision API, Image Understanding, Constraining outputs and inputs, Robust prompt engineering |
+| 3 | Self-healing script | AI Agents, OpenAI Functions / Tools, ReAct Prompting, Agents Usecases, Manual Implementation |
+| 4 | RAG bake-off | Vector Databases, RAG & Implementation, What are Embeddings, Chunking, Retrieval Process, RAG Usecases, RAG vs Fine-tuning, Semantic Search |
+| 5 | Repo agent (MCP) | AI Agents, Agents Usecases, OpenAI Assistant API — note: roadmap.sh has **no dedicated MCP node yet**, same gap our own 2023→2026 table calls out |
+| 6 | Eval leaderboard | Pricing Considerations, Token Counting, Security and Privacy Concerns, Bias and Fairness — roadmap.sh has **no explicit "evals" node**, another gap this project fills that the checklist doesn't |
+
 ## Known limitations / next
 
 - **No cancel-on-disconnect.** If the browser tab closes mid-debate, the server keeps generating (and billing) tokens. Proper fix: thread an `AbortController` through the engine. _(Production-hardening, slated for later in the roadmap.)_
